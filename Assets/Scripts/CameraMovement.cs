@@ -65,7 +65,7 @@ public class CameraMovement : MonoBehaviour
 
         Quaternion targetRotation = Quaternion.Euler(currentXRotation, currentYRotation, 0);
 
-        cam.transform.position = target.position;
+            cam.transform.position = target.position;
         cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, targetRotation, Time.deltaTime * smoothSpeed);
         cam.transform.Translate(new Vector3(0, 0, -distance));
     }
